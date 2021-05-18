@@ -1,5 +1,5 @@
 const Commando = require('discord.js-commando')
-
+const Discord = require('discord.js')
 module.exports = class AddCommand extends Commando.Command{
     constructor(client){
         super(client, {
@@ -12,12 +12,17 @@ module.exports = class AddCommand extends Commando.Command{
     }
 
     async run(message, args){
-        // console.log(message.content)
-        // console.log(args)
-        let sum = 0
-        for (const arg of args){
+        let sum = 0;
+        let argString = '';
+        for(const arg of args){
             sum += parseFloat(arg)
+            argString = argString.concat(arg, ' ')
         }
-        message.reply('The sum is: '+sum)
+        const embed = new Discord.MessageEmbed()
+            .setAuthor('Add Command')
+            .setColor('#000001')
+            .setDescription(`Sum of ${argString}= ${sum}`)
+            .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
+        message.channel.send(embed)
     }
 }
