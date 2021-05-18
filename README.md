@@ -34,12 +34,15 @@
 
 ------------------------------------------
 ### REQUIREMENTS
-\> Node JS and Python have been linked below
+  **NOTE:** None of these are required if you are running the compiled EXE which can be found in the releases or [here](https://github.com/TechVevo/Server-Nuker/releases).
+  
+\> Node JS and Python have been linked below:
 - [Node JS v16](https://nodejs.org/en/)
 - [Python3](https://www.python.org/downloads/)
 - NPM (It is installed by default if you install Node JS)
 - Basic coding knowledge in JavaScript (You can watch some tutorials online)
 
-**NOTE:** None of these are required if you are running the compiled EXE which can be found in the releases or [here](https://github.com/TechVevo/Server-Nuker/releases).
-
 ------------------------------------------
+### ©️COPYRIGHT DISCLAIMER
+- I am not encouraging raiding or any other similar form. It is purely for educational purposes only. To companies including but not limited to Discord this is a :copyright:copyright disclaimer Under Section 107 of the Copyright Act 1976 where allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.
+- If for any reason this needs to be removed, please contact me at tech.vevo15@gmail.com
