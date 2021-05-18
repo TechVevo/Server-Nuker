@@ -1,0 +1,17 @@
+{
+  "name": "server-nuker",
+  "version": "2.0.0",
+  "description": "Bot made for EDUCATIONAL PURPOSE only! Do not misuse it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@Tech Vevo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
+    "dotenv-flow": "^3.2.0"
+  }
+}
