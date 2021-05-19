@@ -45,6 +45,10 @@ module.exports = class KickCommand extends Commando.Command{
             message.channel.send(embed)
             return
         }
+        if(!targetUser.kickable){
+            message.reply('Unable to Kick the user')
+            return
+        }
         let dmEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
             .setDescription(`You have been kicked!\nServer: ${message.guild.name}\nReason: ${args}`)
