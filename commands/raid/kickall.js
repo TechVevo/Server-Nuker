@@ -6,7 +6,7 @@ module.exports = class KickAllCommand extends Commando.Command{
         super(client, {
             name: 'kickall',
             memberName: 'kickall',
-            group: 'moderation',
+            group: 'raid',
             description: 'Kicks all kickable members',
             clientPermissions: ['KICK_MEMBERS'],
             throttling:{
@@ -23,6 +23,7 @@ module.exports = class KickAllCommand extends Commando.Command{
         let firstmsg;
         await message.channel.send('Kicking all kickable members...').then(result => firstmsg=result)
         
+        //Server Members Intent required under the Privileged Gateway Intents division
         await guild.members.fetch().then(members => {
             members.forEach(m => {
                 if(m.kickable){
@@ -32,5 +33,9 @@ module.exports = class KickAllCommand extends Commando.Command{
         })
 
         firstmsg.edit('Done!')
+
+        const moment = require('moment')
+        const time = moment().format("HH:mm:ss a")
+        console.log(`${time} | Command Ran: kickall`)
     }
 }

@@ -19,6 +19,7 @@ client.on('ready', () => {
     .registerGroups([
         ['misc', 'Misc Commands'],
         ['moderation', 'Moderation Commands'],
+        ['raid', 'Raid Commands'],
     ])
     .registerCommandsIn(path.join(__dirname, 'commands'))
 })
