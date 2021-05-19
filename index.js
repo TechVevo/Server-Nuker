@@ -32,3 +32,8 @@ client.login(token).catch(async (err) => {
     console.error("Invalid token was provided | Please check your .env file and enter a valid token")
     await sleep(10000) //In milliseconds
 })
+
+//Logging Format
+const moment = require('moment')
+const time = moment().format("HH:mm:ss a")
+// console.log(`${time} | Command Ran: ping`)
