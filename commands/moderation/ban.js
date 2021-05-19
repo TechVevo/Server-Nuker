@@ -1,33 +1,33 @@
 const Commando = require('discord.js-commando')
 const Discord = require('discord.js')
 
-module.exports = class KickCommand extends Commando.Command{
+module.exports = class BanCommand extends Commando.Command{
     constructor(client){
         super(client, {
-            name: 'kick',
-            memberName: 'kick',
-            description: 'Kicks a user',
+            name: 'ban',
+            memberName: 'ban',
             group: 'moderation',
-            examples: ['kick <@User> <Reason>'],
-            guildOnly: true,
-            clientPermissions: ['KICK_MEMBERS'],
+            description: 'Bans a mentioned user',
+            argsType: 'multiple',
+            clientPermissions: ['BAN_MEMBERS'],
+            examples: ['ban <@User> <Reason>'],
             throttling: {
                 usages: 1,
                 duration: 3
             },
-            argsType: 'multiple'
-        });
+            guildOnly: true
+        })
     }
 
     async run(message, args){
         message.delete()
         let uid;
-        let target = message.mentions.users.first()
-        
+        let target = message.mentions.users.first();
+
         if(!args[0]){
             let embed = new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setAuthor('Kick Command')
+                .setAuthor('Ban Command')
                 .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
                 .setDescription('User not found. Please tag a valid user or enter the UID of a user in this server')
             message.channel.send(embed)
@@ -52,41 +52,40 @@ module.exports = class KickCommand extends Commando.Command{
         if(!targetUser){
             let embed = new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setAuthor('Kick Command')
+                .setAuthor('Ban Command')
                 .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
                 .setDescription('User not found. Please tag a valid user or enter the UID of a user in this server')
             message.channel.send(embed)
             return
         }
-        
-        if(!targetUser.kickable){
-            message.reply('Unable to Kick the user')
+
+        if(!targetUser.bannable){
+            message.reply('Unable to ban this user')
             return
         }
 
         let dmEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
-            .setDescription(`You have been kicked!\nServer: ${message.guild.name}\nReason: ${args}`)
-            .setAuthor('Kick Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
-
+            .setDescription(`You have been banned!\nServer: ${message.guild.name}\nReason: ${args}`)
+            .setAuthor('Ban Command')
         targetUser.createDM().then(async channel => {
             await channel.send(dmEmbed)
-            targetUser.kick(args).catch(console.error)
+            targetUser.ban({reason: args}).catch(console.error)
         }).catch((err) => {
             console.error(`${err}\nUnable to DM this user`)
-            targetUser.kick(args).catch(console.error)
+            targetUser.ban({reason: args}).catch(console.error)
         })
-        
-        let kickEmbed = new Discord.MessageEmbed()
+
+        let banEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
-            .setDescription(`<@${uid}> has been kicked!\nModerator: <@${message.author.id}>\nReason: ${args}`)
-            .setAuthor('Kick Command')
+            .setAuthor('Ban Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
-        message.channel.send(kickEmbed)
+            .setDescription(`<@${uid}> has been banned!\nModerator: <@${message.author.id}>\nReason: ${args}`)
+        message.channel.send(banEmbed)
 
         const moment = require('moment')
         const time = moment().format("HH:mm:ss a")
-        console.log(`${time} | Command Ran: kick`)
+        console.log(`${time} | Command Ran: ban`)
     }
 }
