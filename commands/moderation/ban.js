@@ -67,7 +67,7 @@ module.exports = class BanCommand extends Commando.Command{
         let dmEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
-            .setDescription(`You have been banned!\nServer: ${message.guild.name}\nReason: ${args}`)
+            .setDescription(`You have been banned!\n\n**Server:** ${message.guild.name}\n**Reason:** ${args}`)
             .setAuthor('Ban Command')
         targetUser.createDM().then(async channel => {
             await channel.send(dmEmbed)
@@ -81,7 +81,7 @@ module.exports = class BanCommand extends Commando.Command{
             .setColor('#000001')
             .setAuthor('Ban Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
-            .setDescription(`<@${uid}> has been banned!\nModerator: <@${message.author.id}>\nReason: ${args}`)
+            .setDescription(`<@${uid}> has been banned!\n\n**Moderator:** <@${message.author.id}>\n**Reason:** ${args}`)
         message.channel.send(banEmbed)
 
         const moment = require('moment')

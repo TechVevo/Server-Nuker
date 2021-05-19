@@ -58,7 +58,7 @@ module.exports = class KickCommand extends Commando.Command{
             message.channel.send(embed)
             return
         }
-        
+
         if(!targetUser.kickable){
             message.reply('Unable to Kick the user')
             return
@@ -66,7 +66,7 @@ module.exports = class KickCommand extends Commando.Command{
 
         let dmEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
-            .setDescription(`You have been kicked!\nServer: ${message.guild.name}\nReason: ${args}`)
+            .setDescription(`You have been kicked!\n\n**Server:** ${message.guild.name}\n**Reason:** ${args}`)
             .setAuthor('Kick Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
 
@@ -80,7 +80,7 @@ module.exports = class KickCommand extends Commando.Command{
         
         let kickEmbed = new Discord.MessageEmbed()
             .setColor('#000001')
-            .setDescription(`<@${uid}> has been kicked!\nModerator: <@${message.author.id}>\nReason: ${args}`)
+            .setDescription(`<@${uid}> has been kicked!\n\n**Moderator:** <@${message.author.id}>\n**Reason:** ${args}`)
             .setAuthor('Kick Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
         message.channel.send(kickEmbed)
