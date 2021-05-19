@@ -33,7 +33,8 @@ client.login(token).catch(async (err) => {
     await sleep(10000) //In milliseconds
 })
 
+return
 //Logging Format
 const moment = require('moment')
 const time = moment().format("HH:mm:ss a")
-// console.log(`${time} | Command Ran: ping`)
+console.log(`${time} | Command Ran: ping`)
