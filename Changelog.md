@@ -4,7 +4,7 @@
 
 Last updated: 19th May, 2021
 
-#### v2.1.0 BETA:
+### v2.1.0 BETA:
 - Added:
   - Ban Command
   - DMs the user when using ban/kick command
@@ -26,7 +26,7 @@ Last updated: 19th May, 2021
 - Removed:
   - Excess code causing the bot to lag sometimes
 
-#### v2.0.0 BETA
+### v2.0.0 BETA
 
 \> **EXE Released in the release tab! [Click Here](https://github.com/TechVevo/Server-Nuker/releases/)**.
 
@@ -42,7 +42,7 @@ Last updated: 19th May, 2021
   - Ban All
   - Kick All
 
-#### v2.0.0 ALPHA
+### v2.0.0 ALPHA
 - Added:
   - Discord.js v12
   - Commando framework (discord.js-commando)
@@ -52,6 +52,6 @@ Last updated: 19th May, 2021
   - DotEnv-Flow giving error when importing `.env` variables in multiple scripts
   - Discord.js caching issues
 
-#### v2.0.0 PRE-ALPHA
+### v2.0.0 PRE-ALPHA
 - Reworked the entire project.
 - Scraped all the code of v1 to account for the 7 months updates.
