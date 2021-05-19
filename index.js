@@ -16,6 +16,7 @@ client.on('ready', () => {
     console.log(`${client.user.tag} is ready!`)
 
     client.registry
+    .registerDefaultTypes()
     .registerGroups([
         ['misc', 'Misc Commands'],
         ['moderation', 'Moderation Commands'],
