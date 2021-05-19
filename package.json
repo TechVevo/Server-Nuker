@@ -3,8 +3,13 @@
   "version": "2.0.0",
   "description": "Bot made for EDUCATIONAL PURPOSE only! Do not misuse it",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "pkg":{
+    "assets": ["./**"],
+    "targets": ["node16-win-x64"]
   },
   "author": "@Tech Vevo",
   "license": "ISC",
