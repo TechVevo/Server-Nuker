@@ -9,6 +9,7 @@
 
 ------------------------------------------
 ### USAGE
+#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.1-BETA)!
 #### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
 ![](https://i.imgur.com/aWlEXab.png)
 - The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
