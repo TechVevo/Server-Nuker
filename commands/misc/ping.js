@@ -31,5 +31,9 @@ module.exports = class PingCommand extends Commando.Command{
                 .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
             result.edit(newEmbed)
         })
+
+        const moment = require('moment')
+        const time = moment().format("HH:mm:ss a")
+        console.log(`${time} | Command Ran: ping`)
     }
 }

@@ -66,5 +66,9 @@ module.exports = class KickCommand extends Commando.Command{
             .setAuthor('Kick Command')
             .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
         message.channel.send(kickEmbed)
+
+        const moment = require('moment')
+        const time = moment().format("HH:mm:ss a")
+        console.log(`${time} | Command Ran: kick`)
     }
 }
