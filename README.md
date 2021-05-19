@@ -9,6 +9,8 @@
 
 ------------------------------------------
 ### USAGE
+#### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
+![](https://i.imgur.com/aWlEXab.png)
 - The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
   - > I know many people might be very doubtful. If you do not trust the EXE run a virus scan on it or put it in https://virustotal.com
   - Download the EXE and place it in a seperate folder (Name it whatever you want).
