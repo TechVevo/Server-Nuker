@@ -3,9 +3,6 @@
 * **Author:** Tech Vevo
 * **Current Version:** 2.0.0 [BETA]
 * This bot & source is made for fun and purely EDUCATIONAL PURPOSE! I do not take any responsibilty or liability due to the damage/problems caused by this product. It is your (the user's) sole responsibilty.
-------------------------------------------
-## LICENSING
-\> This product is licensed under the [GNU General Public License v3.0](https://github.com/TechVevo/Server-Nuker/blob/master/LICENSE).
 
 ------------------------------------------
 ### USAGE
@@ -39,11 +36,15 @@
 ### REQUIREMENTS
   **NOTE:** None of these are required if you are running the compiled EXE which can be found in the releases or [here](https://github.com/TechVevo/Server-Nuker/releases).
   
-\> Node JS and Python have been linked below:
+\- Node JS and Python have been linked below:
 - [Node JS v16](https://nodejs.org/en/)
 - [Python3](https://www.python.org/downloads/)
 - NPM (It is installed by default if you install Node JS)
 - Basic coding knowledge in JavaScript (You can watch some tutorials online)
+
+------------------------------------------
+### LICENSING
+\- This product is licensed under the [GNU General Public License v3.0](https://github.com/TechVevo/Server-Nuker/blob/master/LICENSE).
 
 ------------------------------------------
 ### ©️COPYRIGHT DISCLAIMER
