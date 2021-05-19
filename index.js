@@ -14,6 +14,23 @@ const client = new Commando.CommandoClient({
 client.on('ready', () => {
     console.log(`${client.user.tag} is ready!`)
 
+    //Changing RPC
+    let rpcdata = ['Nuke Bot v2', 'By: Tech Vevo [YT]']
+    let rpctype = ['PLAYING', 'PLAYING']
+    var i = 0;
+    setInterval(() => {
+        client.user.setPresence({
+            activity:{
+                name: rpcdata[i],
+                type: rpctype[i],
+            }
+        })
+        i += 1;
+        if(i === 2){
+            i = 0;
+        }
+    }, 8000)
+
     client.registry
     .registerDefaultTypes()
     .registerGroups([
