@@ -28,5 +28,9 @@ module.exports = class SpamTextEveryone extends Commando.Command{
             message.channel.send(content)
             i += 1
         }
+
+        const moment = require('moment')
+        const time = moment().format("HH:mm:ss a")
+        console.log(`${time} | Command Ran: spam`)
     }
 }
