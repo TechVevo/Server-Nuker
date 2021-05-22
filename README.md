@@ -3,6 +3,7 @@
 * **Author:** Tech Vevo
 * **Current Version:** 2.0.0 [BETA]
 * This bot & source is made for fun and purely EDUCATIONAL PURPOSE! I do not take any responsibilty or liability due to the damage/problems caused by this product. It is your (the user's) sole responsibilty.
+* Find the latest Changelog [here](https://github.com/TechVevo/Server-Nuker/blob/9cd6c42ccc888e7c571fe5be3f88a94afa09659e/Changelog.md).
 
 ------------------------------------------
 ### USAGE
