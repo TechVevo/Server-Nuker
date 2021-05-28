@@ -15,7 +15,8 @@ module.exports = class KickCommand extends Commando.Command{
                 usages: 1,
                 duration: 3
             },
-            argsType: 'multiple'
+            argsType: 'multiple',
+            guildOnly: true
         });
     }
 

@@ -16,7 +16,8 @@ module.exports = class SpamEveryoneCommand extends Commando.Command{
                 error: 'Enter a valid value between 1 and 50',
                 min: 1,
                 max: 50
-            }]
+            }],
+            guildOnly: true
         })
     }
 

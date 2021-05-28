@@ -12,7 +12,8 @@ module.exports = class KickAllCommand extends Commando.Command{
             throttling:{
                 usages: 1,
                 duration:60
-            }
+            },
+            guildOnly: true
         })
     }
 

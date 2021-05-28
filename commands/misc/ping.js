@@ -10,7 +10,8 @@ module.exports = class PingCommand extends Commando.Command{
             throttling:{
                 usages: 1,
                 duration: 3
-            }
+            },
+            guildOnly: true
         })
     }
 

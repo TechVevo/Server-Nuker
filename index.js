@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando')
+const Discord = require('discord.js')
 
 const path = require('path')
 
@@ -40,6 +41,22 @@ client.on('ready', () => {
     ])
     .registerCommandsIn(path.join(__dirname, 'commands'))
 })
+
+// client.on('guildMemberAdd', async member => {
+//     const guild = await client.guilds.fetch('') //Your Server ID
+
+//     const channel = await guild.channels.resolve('') //Welcome channel ID
+
+//     if(!channel || !guild || !channel.type === 'text'){
+//         console.error('Invalid IDs! Please check Guild and Channel ID again!')
+//         return
+//     }
+
+//     const embed = new Discord.MessageEmbed()
+//         .setColor('#000001')
+//         .setDescription(`<@${member.id}> Welcome to our server!\nYou are our ${guild.memberCount} member`)
+//     channel.send(embed)
+// })
 
 //Pauses so the EXE doesnt close immediately when a token fails
 function sleep(ms){

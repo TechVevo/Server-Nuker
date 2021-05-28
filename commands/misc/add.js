@@ -7,7 +7,8 @@ module.exports = class AddCommand extends Commando.Command{
             group: 'misc',
             memberName: 'add',
             description: 'Adds two numbers',
-            argsType: 'multiple'
+            argsType: 'multiple',
+            guildOnly: true
         })
     }
 
