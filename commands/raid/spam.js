@@ -9,7 +9,11 @@ module.exports = class SpamTextEveryone extends Commando.Command{
             memberName: 'spam',
             description: 'Spams a text',
             argsType: 'multiple',
-            guildOnly: true
+            guildOnly: true,
+            throttling:{
+                usages:1,
+                duration:3
+            }
         })
     }
 

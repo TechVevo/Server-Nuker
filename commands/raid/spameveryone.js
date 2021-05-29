@@ -17,7 +17,11 @@ module.exports = class SpamEveryoneCommand extends Commando.Command{
                 min: 1,
                 max: 50
             }],
-            guildOnly: true
+            guildOnly: true,
+            throttling:{
+                usages:1,
+                duration:3
+            }
         })
     }
 

