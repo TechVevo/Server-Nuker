@@ -2,7 +2,26 @@
 
 > The list will be from latest version to first version.
 
-Last updated: 19th May, 2021
+Last updated: 29th May, 2021
+
+### v2.2.0 BETA:
+- Added:
+  - Purge Command
+  - Seperate group called `Raid` for all the Raid commands
+  - Spam DM Command - Spams a mentioned user with <count> no. of messages
+  - Spam Text Channel Command
+  - Spam Voice Channel Command
+  - Spam Roles Command - It creates roles in Rainbow colours 😉
+  - Comments to some necessary place [Haven't commented completely yet]
+- Fixed:
+  - Commands crashing the bot when sent in DMs
+  - Timeouts for some big commands (Like Ban All)
+  - Errors while users DMs are turned off during a command that uses DMs
+  - Potential laggy code | Improved performance
+- Removed:
+  - Lot of repeating code
+  - Useless embeds and commented code (That I scraped and hence no use)
+  - Embed footers
 
 ### v2.1.0 BETA:
 - Added:
@@ -15,7 +34,7 @@ Last updated: 19th May, 2021
   - Spam Owner Command
   - Logging every command ran successfully in the console
 - Fixed:
-  - `guild.members.fetch()` loading infinitely
+  - `guild.members.fetch()` loading infinitely | You need to have Server Member intent enabled in "Privileged Intent" in your bot settings!
   - Caches not loading
   - Member Presences not loading
   - Invalid arguments crashing the bot
@@ -54,4 +73,4 @@ Last updated: 19th May, 2021
 
 ### v2.0.0 PRE-ALPHA
 - Reworked the entire project.
-- Scraped all the code of v1 to account for the 7 months updates.
+- Scraped all the code of v1 to account for the 7 months of library updates.
