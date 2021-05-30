@@ -30,7 +30,7 @@ module.exports = class SpamRoles extends Commando.Command {
         "Error! Enter a valid number for the count\n`.spamroles <count> | .spamroles 3`"
       )
       .setColor("#ff0000");
-    if (!args[0] || typeof parseFloat(args[0]) !== "number") {
+    if (!args[0] || isNaN(parseFloat(args[0]))) {
       message.channel.send(noNumEmbed);
       return;
     }

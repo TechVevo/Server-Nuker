@@ -27,6 +27,10 @@ module.exports = class SpamOwnerCommand extends Commando.Command {
     }
     let i = 1;
     let count = args.shift();
+    if(isNaN(parseFloat(count))){
+      message.channel.send("Invalid count")
+      return
+  }
     let text;
     if (!args[0]) {
       text = `||<@${message.guild.owner.id}>||\nGET RAIDED IDIOT $#%@!!!`;

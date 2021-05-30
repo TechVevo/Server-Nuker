@@ -29,6 +29,10 @@ module.exports = class SpamEveryoneCommand extends Commando.Command {
 
   async run(message, { count }) {
     message.delete();
+    if(isNaN(parseFloat(count))){
+      message.channel.send("Invalid count")
+      return
+  }
     let i = 1;
     while (i <= count) {
       message.channel.send("||@everyone||\nLOSERS! GET RAIDED LOL");

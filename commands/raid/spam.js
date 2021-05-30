@@ -26,6 +26,10 @@ module.exports = class SpamTextEveryone extends Commando.Command {
       return;
     }
     let count = args.shift();
+    if(isNaN(parseFloat(count))){
+      message.channel.send("Invalid count")
+      return
+  }
     let content = "LOL! Your PP: 8==D";
     if (args[0]) {
       content = args.join(" ");
