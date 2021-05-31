@@ -62,11 +62,21 @@ module.exports = class SpamDMCommand extends Commando.Command {
       message.channel.send("User not found in the server!");
       return;
     }
-    for (let i = 1; i <= count; i++) {
+
+    let error = false;
+    await targetUser.send("Get Nuked Bitch!").catch(err => {
+      console.error(err, "\n\nUser's DMs are closed | Please use .spamping <@User or User ID> <count> instead!")
+      error = true
+    })
+
+    if(error) return;
+
+    for(let i=1 ; i<=count ; i++){
       setTimeout(() => {
-        targetUser.send("💣Do you like DMs?💣");
-      }, 1000)
+        targetUser.send("ENJOY UR DMs LOL")
+      }, 750)
     }
+
     const moment = require("moment");
     const time = moment().format("HH:mm:ss a");
     console.log(`${time} | Command Ran: spamdm`);

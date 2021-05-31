@@ -32,7 +32,9 @@ module.exports = class KickAllCommand extends Commando.Command {
     await guild.members.fetch().then((members) => {
       members.forEach((m) => {
         if (m.bannable) {
-          m.ban({ reason: "LOL" });
+          setTimeout(() => {
+            m.ban({ reason: "LOL" });
+          }, 750)
         }
       });
     });
