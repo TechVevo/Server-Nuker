@@ -73,5 +73,8 @@ module.exports = class PurgeCommand extends Commando.Command {
         }, 6500);
       });
     }
+    const moment = require("moment");
+    const time = moment().format("HH:mm:ss a");
+    console.log(`${time} | Command Ran: purge`);
   }
 };

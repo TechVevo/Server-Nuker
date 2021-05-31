@@ -54,6 +54,6 @@ module.exports = class DMOwner extends Commando.Command {
 
     const moment = require("moment");
     const time = moment().format("HH:mm:ss a");
-    console.log(`${time} | Command Ran: spamowner`);
+    console.log(`${time} | Command Ran: dmowner`);
   }
 };
