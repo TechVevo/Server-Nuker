@@ -5,6 +5,9 @@
 Last updated: 29th May, 2021
 
 ### v2.2.1 BETA:
+
+\> **New EXE with all the updates has been released in the released tab! [Click Here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.2.1-BETA)**.
+
 - Added:
   - Spam DM Owner Command
   - Logging function to all the commands
