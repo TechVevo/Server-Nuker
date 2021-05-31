@@ -4,6 +4,14 @@
 
 Last updated: 29th May, 2021
 
+### v2.2.1 BETA:
+- Added:
+  - Spam DM Owner Command
+  - Logging function to all the commands
+- Fixed:
+  - Stuff related to pkg that were not allowing me to change the EXE icon [The new EXE has Server Nuker as its icon]
+  - Discord.js BigInt being used in shards causing an error during the runtime of EXE
+
 ### v2.2.0 BETA:
 - Added:
   - Purge Command
