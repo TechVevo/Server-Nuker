@@ -44,12 +44,18 @@ module.exports = class PurgeCommand extends Commando.Command {
 
     let completed = false;
 
+    if (delCount > 500) {
+      delCount = 500;
+    }
+
     while (delCount > 100) {
       await channel.messages.fetch({ limit: 100 }).then((m) => {
         toBeDeleted = m.filter((msg) => !msg.pinned);
       });
 
-      channel.bulkDelete(toBeDeleted);
+      channel
+        .bulkDelete(toBeDeleted)
+        .catch((err) => console.error(err + "\n\nAn error seems to have occured, please submit a bug report in the git repo if it persists!"));
 
       delCount = delCount - 100;
     }
@@ -58,7 +64,9 @@ module.exports = class PurgeCommand extends Commando.Command {
       toBeDeleted = m.filter((msg) => !msg.pinned);
     });
 
-    channel.bulkDelete(toBeDeleted);
+    channel
+      .bulkDelete(toBeDeleted)
+      .catch((err) => console.error(err + "\n\nAn error seems to have occured, please submit a bug report in the git repo if it persists!"));
 
     if (count <= 1) {
       message.channel.send(`Purged ${count} message`).then((m) => {
