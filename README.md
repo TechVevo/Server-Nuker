@@ -9,6 +9,8 @@
 ### USAGE
 #### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)!
 #### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
+
+#### 1. EXE Method
 ![](https://i.imgur.com/aWlEXab.png)
 - The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
   - > I know many people might be very doubtful. If you do not trust the EXE run a virus scan on it or put it in https://virustotal.com
@@ -23,14 +25,17 @@
   - Now for the name, enter `.env` and save it.
   - Open the EXE and enjoy nuking!
 
-- If you do not trust the EXE (or) if you want to run directly from the source, follow the instructions below. You also need to satisfy the "REQUIREMENTS" given below (You do not need those for the EXE)
+#### 2. MANUAL Method
+> **Note:** If you are going to follow this method, basic knowledge of coding is required. If you are new/don't want the hassle, then I highly suggest you to follow the above given EXE Method!
+- If you do not trust the EXE (or) if you want to run directly from the source, follow the instructions below. You also need to **satisfy the "[REQUIREMENTS](https://github.com/TechVevo/Server-Nuker#requirements)" given below!** (You do not need those for the EXE)
   - Go to the master branch and click on "Code" and give "Download as ZIP".
 ![](https://i.imgur.com/uPRwVUa.png)
   - Extract it and navigate inside the folder. It should look somewhat like this:
 ![](https://i.imgur.com/ZtSBeiD.png)
   - Open the .env file in NotePad and edit the TOKEN with your bot's token. You can also change the prefix (Default is `.`) if you want.
   - Now open a terminal here or navigate to this folder in cmd.
-  - Type in `node index.js`.
+  - Type in `npm i`. Doing so will install all the necessary dependancies
+  - Now type in `node index.js` or `npm start`
   - Once you get the "ready" message that looks something like "<Your Bot> is ready!", you can run `<prefix>help` to get a list of commands.
 
 ------------------------------------------
