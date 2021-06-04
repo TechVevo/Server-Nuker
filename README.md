@@ -3,11 +3,11 @@
 * **Author:** Tech Vevo
 * **Current Version:** 2.0.0 [BETA]
 * This bot & source is made for fun and purely EDUCATIONAL PURPOSE! I do not take any responsibilty or liability due to the damage/problems caused by this product. It is your (the user's) sole responsibilty.
-* Find the latest Changelog [here](https://github.com/TechVevo/Server-Nuker/blob/9cd6c42ccc888e7c571fe5be3f88a94afa09659e/Changelog.md).
+* Find the latest Changelog [here](https://github.com/TechVevo/Server-Nuker/master/Changelog.md).
 
 ------------------------------------------
 ### USAGE
-#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.2.1-BETA)!
+#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)!
 #### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
 ![](https://i.imgur.com/aWlEXab.png)
 - The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
