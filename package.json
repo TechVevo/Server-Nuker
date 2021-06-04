@@ -10,7 +10,9 @@
   "pkg": {
     "assets": [
       "node_modules/**",
-      "commands/**"
+      "commands/**",
+      "versioncheck.js",
+      "version.json"
     ],
     "targets": [
       "node14-win-x64"
