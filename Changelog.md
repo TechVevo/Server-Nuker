@@ -6,7 +6,7 @@ Last updated: 29th May, 2021
 
 ### v2.3.0:
 
-\> **New EXE with all the updates has been released! Check the release tab (or) [Click Here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)
+\> **New EXE with all the updates has been released! Check the release tab (or) [Click Here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)**
 
 - Added:
   - Version Checker for the EXE | Automatically checks the version and informs the user if a newer version is available
