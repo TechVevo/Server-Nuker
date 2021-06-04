@@ -26,7 +26,7 @@
   - Open the EXE and enjoy nuking!
 
 #### 2. MANUAL Method
-> **Note:** If you are going to follow this method, basic knowledge of coding is required. If you are new/don't want the hassle, then I highly suggest you to follow the above given EXE Method!
+> **Note:** If you are going to follow this method, basic knowledge of coding is required. If you are new/don't want the hassle, then I highly suggest you to follow the above given [EXE Method](https://github.com/TechVevo/Server-Nuker#1-exe-method)!
 - If you do not trust the EXE (or) if you want to run directly from the source, follow the instructions below. You also need to **satisfy the "[REQUIREMENTS](https://github.com/TechVevo/Server-Nuker#requirements)" given below!** (You do not need those for the EXE)
   - Go to the master branch and click on "Code" and give "Download as ZIP".
 ![](https://i.imgur.com/uPRwVUa.png)
