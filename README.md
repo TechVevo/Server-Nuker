@@ -1,7 +1,7 @@
 # Server Nuker
 ### Description
 * **Author:** Tech Vevo
-* **Current Version:** 2.0.0 [BETA]
+* **Current Version:** 2.3.1
 * This bot & source is made for fun and purely EDUCATIONAL PURPOSE! I do not take any responsibilty or liability due to the damage/problems caused by this product. It is your (the user's) sole responsibilty.
 * Find the latest Changelog [here](https://github.com/TechVevo/Server-Nuker/blob/master/Changelog.md).
 
