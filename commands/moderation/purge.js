@@ -66,7 +66,7 @@ module.exports = class PurgeCommand extends Commando.Command {
 
     channel
       .bulkDelete(toBeDeleted)
-      .catch((err) => console.error(err + "\n\nAn error seems to have occured, please submit a bug report in the git repo if it persists!"));
+      .catch();
 
     if (count <= 1) {
       message.channel.send(`Purged ${count} message`).then((m) => {

@@ -4,8 +4,8 @@ const Discord = require("discord.js");
 module.exports = class TextChannelCommand extends Commando.Command {
   constructor(client) {
     super(client, {
-      name: "textchannel",
-      memberName: "textchannel",
+      name: "spamtextchannels",
+      memberName: "spamtextchannels",
       group: "raid",
       description: "Spams text channels",
       argsType: "multiple",
