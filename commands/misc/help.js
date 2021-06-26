@@ -114,5 +114,9 @@ module.exports = class HelpCommand extends Commando.Command {
         }
       );
     message.channel.send(embed);
+
+    const moment = require("moment");
+    const time = moment().format("HH:mm:ss a");
+    console.log(`${time} | Command Ran: help`);
   }
 };

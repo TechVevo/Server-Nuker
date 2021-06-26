@@ -9,6 +9,7 @@ module.exports = class TextChannelCommand extends Commando.Command {
       group: "raid",
       description: "Spams text channels",
       argsType: "multiple",
+      clientPermissions: ["MANAGE_CHANNELS"],
       guildOnly: true,
       throttling: {
         usages: 1,

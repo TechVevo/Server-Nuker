@@ -10,6 +10,7 @@ module.exports = class SpamRoles extends Commando.Command {
       group: "raid",
       guildOnly: true,
       argsType: "multiple",
+      clientPermissions: ["MANAGE_ROLES"],
       throttling: {
         usages: 1,
         duration: 5,

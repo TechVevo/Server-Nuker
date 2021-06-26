@@ -5,38 +5,48 @@ module.exports = class SpamEveryoneCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: "spameveryone",
-      memberName: "spameveryone",
-      aliases: ["spamall"],
       group: "raid",
-      description: "@everyone many times",
-      args: [
-        {
-          key: "count",
-          prompt: "How many times do you want to spam? [Min: 1 | Max: 50]",
-          type: "integer",
-          error: "Enter a valid value between 1 and 50",
-          min: 1,
-          max: 50,
-        },
-      ],
+      memberName: "spameveryone",
+      description: "Spam pings everyone in the server",
       guildOnly: true,
-      throttling: {
-        usages: 1,
-        duration: 3,
-      },
+      clientPermissions: ["MENTION_EVERYONE"],
+      argsType: "multiple",
     });
   }
 
-  async run(message, { count }) {
+  async run(message, args) {
     message.delete();
-    if(isNaN(parseFloat(count))){
-      message.channel.send("Invalid count")
-      return
-  }
-    let i = 1;
-    while (i <= count) {
-      message.channel.send("||@everyone||\nLOSERS! GET RAIDED LOL");
-      i += 1;
+
+    const failEmbed = new Discord.MessageEmbed()
+      .setAuthor("Spam Everyone Command")
+      .setColor("#ff0000")
+      .setFooter(
+        "Server Nuker v2.0.0 [BETA]",
+        "https://i.imgur.com/BCDIf5E.jpg"
+      )
+      .setDescription("Invalid arguments provided!\n`.spameveryone <count>`");
+
+    if (!args[0] || !args[1]) {
+      message.channel.send(failEmbed);
+      return;
+    }
+    var count = args[0];
+    var isNum = parseFloat(count);
+
+    if (typeof isNum != "number") {
+      message.channel.send(failEmbed);
+      return;
+    }
+    count = Math.round(count);
+
+    if (count > 40) {
+      count = 40;
+    }
+
+    for (let i = 1; i <= count; i++) {
+      setTimeout(() => {
+        message.channel.send("@everyone");
+      }, 750);
     }
 
     const moment = require("moment");

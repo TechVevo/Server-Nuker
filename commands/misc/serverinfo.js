@@ -74,5 +74,9 @@ module.exports = class ServerInfoCommand extends Commando.Command {
       )
       .setThumbnail(guild.iconURL({ dynamic: true }));
     message.channel.send(embed);
+
+    const moment = require("moment");
+    const time = moment().format("HH:mm:ss a");
+    console.log(`${time} | Command Ran: serverinfo`);
   }
 };
