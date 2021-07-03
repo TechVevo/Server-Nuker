@@ -12,8 +12,8 @@
 ![](https://i.imgur.com/aWlEXab.png)
 
 #### 1. EXE Method
+> I know many people might be very doubtful. If you do not trust the EXE run a virus scan on it or put it in https://virustotal.com
 - The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
-  - > I know many people might be very doubtful. If you do not trust the EXE run a virus scan on it or put it in https://virustotal.com
   - Download the EXE and place it in a seperate folder (Name it whatever you want).
   - Now open notepad and enter your bot's token and prefix like this:
     ```
