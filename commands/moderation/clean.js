@@ -21,7 +21,7 @@ module.exports = class CleanCommand extends Commando.Command {
     const noNumEmbed = new Discord.MessageEmbed()
       .setAuthor("Clean Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(
@@ -43,28 +43,36 @@ module.exports = class CleanCommand extends Commando.Command {
     }
 
     while (count > 100) {
-      await channel.bulkDelete(100).catch(err => console.error(err+"\n API Error caught!"));
+      await channel
+        .bulkDelete(100)
+        .catch((err) => console.error(err + "\n API Error caught!"));
       count -= 100;
     }
 
     if (count > 0) {
-      await channel.bulkDelete(count).catch(err => console.error(err+"\n API Error caught!"));
+      await channel
+        .bulkDelete(count)
+        .catch((err) => console.error(err + "\n API Error caught!"));
     }
-
-    let newMsg;
 
     if (initialCount == 1) {
-      newMsg = channel.send(`Successfully deleted 1 message`);
-    } else if (initialCount > 1) {
-      newMsg = channel.send(`Successfully deleted ${initialCount} messages`);
-    } else {
-      newMsg = channel.send(`Deleted **00** messages!`);
-    }
-
-    if(newMsg){
+      channel.send(`Successfully deleted 1 message`).then((m) =>
         setTimeout(() => {
-            newMsg.delete()
+          m.delete();
         }, 6000)
+      );
+    } else if (initialCount > 1) {
+      channel.send(`Successfully deleted ${initialCount} messages`).then((m) =>
+        setTimeout(() => {
+          m.delete();
+        }, 6000)
+      );
+    } else {
+      channel.send(`Deleted **00** message!`).then((m) =>
+        setTimeout(() => {
+          m.delete();
+        }, 6000)
+      );
     }
 
     const moment = require("moment");

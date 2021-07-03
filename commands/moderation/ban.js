@@ -99,7 +99,7 @@ module.exports = class BanCommand extends Commando.Command {
       .setColor("#000001")
       .setAuthor("Ban Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(

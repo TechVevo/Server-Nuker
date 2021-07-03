@@ -23,7 +23,7 @@ module.exports = class PingCommand extends Commando.Command {
       .setAuthor("Ping Command")
       .setDescription("Calculating Ping...")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       );
     message.channel.send(embed).then((result) => {
@@ -33,7 +33,7 @@ module.exports = class PingCommand extends Commando.Command {
         .setAuthor("Ping Command")
         .setDescription(`API ping: ${this.client.ws.ping}\nBot ping: ${ping}`)
         .setFooter(
-          "Server Nuker v2.0.0 [BETA]",
+          "Server Nuker v2",
           "https://i.imgur.com/BCDIf5E.jpg"
         );
       result.edit(newEmbed);

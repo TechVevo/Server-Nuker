@@ -26,7 +26,7 @@ module.exports = class ServerInfoCommand extends Commando.Command {
       .setColor("#000001")
       .setAuthor("Server Info Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(`Server info for ${guild.name}:`)

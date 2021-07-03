@@ -30,7 +30,7 @@ module.exports = class KickCommand extends Commando.Command {
         .setColor("#ff0000")
         .setAuthor("Kick Command")
         .setFooter(
-          "Server Nuker v2.0.0 [BETA]",
+          "Server Nuker v2",
           "https://i.imgur.com/BCDIf5E.jpg"
         )
         .setDescription(
@@ -60,7 +60,7 @@ module.exports = class KickCommand extends Commando.Command {
         .setColor("#ff0000")
         .setAuthor("Kick Command")
         .setFooter(
-          "Server Nuker v2.0.0 [BETA]",
+          "Server Nuker v2",
           "https://i.imgur.com/BCDIf5E.jpg"
         )
         .setDescription(
@@ -82,7 +82,7 @@ module.exports = class KickCommand extends Commando.Command {
       )
       .setAuthor("Kick Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       );
 
@@ -104,7 +104,7 @@ module.exports = class KickCommand extends Commando.Command {
       )
       .setAuthor("Kick Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       );
     message.channel.send(kickEmbed);

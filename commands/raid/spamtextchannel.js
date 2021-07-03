@@ -24,7 +24,7 @@ module.exports = class TextChannelCommand extends Commando.Command {
     const noNumEmbed = new Discord.MessageEmbed()
       .setAuthor("Spam Roles Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(
@@ -56,6 +56,12 @@ module.exports = class TextChannelCommand extends Commando.Command {
           },
         ]);
       });
+    let msg1;
+    await message.channel
+      .send(`Creating ${count} text channel/s...`)
+      .then((m) => {
+        msg1 = m;
+      });
 
     for (let i = 1; i <= count; i++) {
       setTimeout(() => {
@@ -70,6 +76,11 @@ module.exports = class TextChannelCommand extends Commando.Command {
           });
       }, 1000);
     }
+
+    await msg1.edit("Done!");
+    setTimeout(() => {
+      msg1.delete();
+    }, 5000);
 
     const moment = require("moment");
     const time = moment().format("HH:mm:ss a");

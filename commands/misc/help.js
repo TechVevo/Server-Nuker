@@ -23,7 +23,7 @@ module.exports = class HelpCommand extends Commando.Command {
           '`- Anything within "[]" means that it is an optional argument`'
       )
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .addFields(
@@ -61,9 +61,13 @@ module.exports = class HelpCommand extends Commando.Command {
           value: "Kicks the specified user",
         },
         {
+          name: "`.clean <count>`",
+          value: "Purges the specified amt of messages including pinned messages | Max Limit: 500",
+        },
+        {
           name: "`.purge <count>`",
           value:
-            "Purges/Deletes the specified amount of messages\nMax Limit: 500",
+            "Purges/Deletes the specified amount of messages excluding pinned messages | Max Limit: 300",
         },
         {
           name: "`.warn <@User/User ID> <Reason>`",
@@ -82,6 +86,14 @@ module.exports = class HelpCommand extends Commando.Command {
             "Kicks every single kickable person\n" +
             "**`DO NOT ABUSE! YOU MIGHT BE FLAGGED BY DISCORD`**\n" +
             "**`Requirement:`** `SERVER MEMBERS INTNET` under Privileged Gateway Intents **must be enabled**! [Click here](https://i.imgur.com/aWlEXab.png)",
+        },
+        {
+          name: "`.delchannels`",
+          value: "Deletes all the channels in the server"
+        },
+        {
+          name: "`.delroles`",
+          value: "Deletes all the deletable roles in the server"
         },
         {
           name: "`.dmowner <count>`",

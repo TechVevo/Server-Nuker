@@ -9,74 +9,73 @@ module.exports = class PurgeCommand extends Commando.Command {
       description: "Purges a bunch of messages",
       group: "moderation",
       guildOnly: true,
-      argsType: "multiple",
       clientPermissions: ["MANAGE_MESSAGES"],
-      throttling: {
-        usages: 1,
-        duration: 3,
-      },
     });
   }
 
   async run(message, args) {
+    message.delete();
     const { channel } = message;
 
     const noNumEmbed = new Discord.MessageEmbed()
       .setAuthor("Purge Command")
-      .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
-        "https://i.imgur.com/BCDIf5E.jpg"
-      )
+      .setFooter("Server Nuker v2", "https://i.imgur.com/BCDIf5E.jpg")
       .setDescription(
         "Error! Enter a valid number for the count\n`.purge <count> | .purge 3`"
       )
       .setColor("#ff0000");
-    if (!args[0] || isNaN(parseFloat(args[0]))) {
-      message.channel.send(noNumEmbed);
+    if (!args || isNaN(parseFloat(args))) {
+      channel.send(noNumEmbed);
       return;
     }
 
-    let count = Math.round(args[0]);
-    var delCount = (count + 1).toString(); //The '+1' is to include the user sent message in bulkDelete() itself
-    let toBeDeleted;
+    let count = Math.round(parseFloat(args));
+    let initialCount = count;
 
-    if (delCount > 500) {
-      delCount = 500;
+    if (count < 0) {
+      channel.send("Negative values are not allowed!" + noNumEmbed);
+      return;
     }
+    let toBeDeleted;
+    if (count > 300) count = 300;
 
-    while (delCount > 100) {
+    while (count > 100) {
       await channel.messages.fetch({ limit: 100 }).then((m) => {
         toBeDeleted = m.filter((msg) => !msg.pinned);
       });
 
       channel
         .bulkDelete(toBeDeleted)
-        .catch((err) => console.error(err + "\n\nAn error seems to have occured, please submit a bug report in the git repo if it persists!"));
-
-      delCount = delCount - 100;
+        .catch((err) =>
+          console.error(err + "\nAn error occured in purge.js Line:47")
+        );
+      count -= 100;
     }
 
-    await channel.messages.fetch({ limit: delCount }).then((m) => {
+    await channel.messages.fetch({ limit: 100 }).then((m) => {
       toBeDeleted = m.filter((msg) => !msg.pinned);
     });
 
     channel
       .bulkDelete(toBeDeleted)
-      .catch();
+      .catch((err) =>
+        console.error(err + "\nAn error occured in purge.js Line:60")
+      );
 
     if (count <= 1) {
-      message.channel.send(`Purged ${count} message`).then((m) => {
+      channel.send(`Purged ${initialCount} message`).then((m) => {
         setTimeout(() => {
           m.delete();
         }, 6500);
       });
     } else {
-      message.channel.send(`Purged ${count} messages`).then((m) => {
+      channel.send(`Purged ${initialCount} messages`).then((m) => {
         setTimeout(() => {
           m.delete();
         }, 6500);
       });
     }
+
     const moment = require("moment");
     const time = moment().format("HH:mm:ss a");
     console.log(`${time} | Command Ran: purge`);

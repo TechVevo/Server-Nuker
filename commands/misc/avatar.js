@@ -20,7 +20,7 @@ module.exports = class GetAvatarCommand extends Commando.Command {
     const failEmbed = new Discord.MessageEmbed()
       .setColor("#ff0000")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setAuthor("Avatar Command")
@@ -49,7 +49,7 @@ module.exports = class GetAvatarCommand extends Commando.Command {
     const avatarEmbed = new Discord.MessageEmbed()
       .setColor("#000001")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setAuthor("Avatar of:")

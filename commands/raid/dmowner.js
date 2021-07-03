@@ -19,7 +19,7 @@ module.exports = class DMOwner extends Commando.Command {
       .setColor("ff0000")
       .setDescription("Invalid arguments provided!\n`.dmowner <count>`")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       );
     if (!args) {
@@ -31,12 +31,12 @@ module.exports = class DMOwner extends Commando.Command {
       message.channel.send(failEmbed);
       return;
     }
-    count = Math.round(count);
+    count = Math.round(count) - 1;
 
     const owner = await message.guild.owner;
     let error = false;
 
-    await owner.send("Get Nuked Bitch!").catch((err) => {
+    await owner.send("Get Nuked Bitch!\nLike DMs? Enjoy!").catch((err) => {
       console.error(
         err,
         "\n\nUnable to DM the owner | Try using '.spamowner' instead!"

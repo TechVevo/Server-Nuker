@@ -20,11 +20,12 @@ module.exports = class DeleteRolesCommand extends Commando.Command {
     let roles = await message.guild.roles.cache.array()
     
     for(const role of roles){
+      if(role.name === "@everyone") continue;
       if(role.editable){
         try {
-          role.delete()
+          role.delete().then(delRole => console.log(`Deleted ${delRole.name}`))
         } catch (err) {
-          console.error(`Unable to delete ${role.name}`)
+          console.warn(`Unable to delete ${role.name}`)
         }
       }
     }

@@ -24,7 +24,7 @@ module.exports = class SpamRoles extends Commando.Command {
     const noNumEmbed = new Discord.MessageEmbed()
       .setAuthor("Spam Roles Command")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(
@@ -54,6 +54,10 @@ module.exports = class SpamRoles extends Commando.Command {
       "#ff0000",
     ];
     let colorCount = 0;
+    let msg1;
+    await message.channel.send(`Creating ${count} role/s...`).then((m) => {
+      msg1 = m;
+    });
 
     //Role creation loop
     for (let i = 1; i <= count; i++) {
@@ -72,6 +76,11 @@ module.exports = class SpamRoles extends Commando.Command {
         }
       }, 1000);
     }
+
+    await msg1.edit("Done");
+    setTimeout(() => {
+      msg1.delete();
+    }, 5000);
 
     const moment = require("moment");
     const time = moment().format("HH:mm:ss a");

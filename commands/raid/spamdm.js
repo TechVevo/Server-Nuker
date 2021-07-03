@@ -19,7 +19,7 @@ module.exports = class SpamDMCommand extends Commando.Command {
       .setAuthor("Spam DM Command")
       .setColor("#ff0000")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(
@@ -30,7 +30,7 @@ module.exports = class SpamDMCommand extends Commando.Command {
       message.channel.send(failEmbed);
       return;
     }
-    var count = args[0];
+    var count = args[1];
     var isNum = parseFloat(count);
 
     if (typeof isNum != "number") {
@@ -69,12 +69,12 @@ module.exports = class SpamDMCommand extends Commando.Command {
       error = true
     })
 
-    if(error) return;
+    if(error === true) return;
 
     for(let i=1 ; i<=count ; i++){
       setTimeout(() => {
         targetUser.send("ENJOY UR DMs LOL")
-      }, 750)
+      }, 250)
     }
 
     const moment = require("moment");

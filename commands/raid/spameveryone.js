@@ -9,8 +9,7 @@ module.exports = class SpamEveryoneCommand extends Commando.Command {
       memberName: "spameveryone",
       description: "Spam pings everyone in the server",
       guildOnly: true,
-      clientPermissions: ["MENTION_EVERYONE"],
-      argsType: "multiple",
+      clientPermissions: ["MENTION_EVERYONE"]
     });
   }
 
@@ -21,19 +20,17 @@ module.exports = class SpamEveryoneCommand extends Commando.Command {
       .setAuthor("Spam Everyone Command")
       .setColor("#ff0000")
       .setFooter(
-        "Server Nuker v2.0.0 [BETA]",
+        "Server Nuker v2",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription("Invalid arguments provided!\n`.spameveryone <count>`");
 
-    if (!args[0] || !args[1]) {
+    if (!args) {
       message.channel.send(failEmbed);
       return;
     }
-    var count = args[0];
-    var isNum = parseFloat(count);
-
-    if (typeof isNum != "number") {
+    var count = args;
+    if (isNaN(parseFloat(count))) {
       message.channel.send(failEmbed);
       return;
     }
@@ -45,8 +42,8 @@ module.exports = class SpamEveryoneCommand extends Commando.Command {
 
     for (let i = 1; i <= count; i++) {
       setTimeout(() => {
-        message.channel.send("@everyone");
-      }, 750);
+        message.channel.send("@everyone --> Checkout **TECH VEVO** on YouTube!");
+      }, 500);
     }
 
     const moment = require("moment");

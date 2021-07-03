@@ -78,7 +78,7 @@ module.exports = class WarnCommand extends Commando.Command {
       const embed = new Discord.MessageEmbed()
         .setColor("#00fd00")
         .setFooter(
-          "Server Nuker v2.0.0 [BETA]",
+          "Server Nuker v2",
           "https://i.imgur.com/BCDIf5E.jpg"
         )
         .setAuthor("Warn Command")
@@ -88,7 +88,7 @@ module.exports = class WarnCommand extends Commando.Command {
       const errorEmbed = new Discord.MessageEmbed()
         .setColor("#ff0000")
         .setFooter(
-          "Server Nuker v2.0.0 [BETA]",
+          "Server Nuker v2",
           "https://i.imgur.com/BCDIf5E.jpg"
         )
         .setAuthor("Warn Command")
