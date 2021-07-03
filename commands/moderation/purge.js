@@ -22,27 +22,23 @@ module.exports = class PurgeCommand extends Commando.Command {
     const { channel } = message;
 
     const noNumEmbed = new Discord.MessageEmbed()
-      .setAuthor("Spam Roles Command")
+      .setAuthor("Purge Command")
       .setFooter(
         "Server Nuker v2.0.0 [BETA]",
         "https://i.imgur.com/BCDIf5E.jpg"
       )
       .setDescription(
-        "Error! Enter a valid number for the count\n`.spamroles <count> | .spamroles 3`"
+        "Error! Enter a valid number for the count\n`.purge <count> | .purge 3`"
       )
       .setColor("#ff0000");
-    if (!args[0] || typeof parseFloat(args[0]) !== "number") {
+    if (!args[0] || isNaN(parseFloat(args[0]))) {
       message.channel.send(noNumEmbed);
       return;
     }
 
     let count = Math.round(args[0]);
-
     var delCount = (count + 1).toString(); //The '+1' is to include the user sent message in bulkDelete() itself
-
     let toBeDeleted;
-
-    let completed = false;
 
     if (delCount > 500) {
       delCount = 500;
