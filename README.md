@@ -7,7 +7,7 @@
 
 ------------------------------------------
 ### USAGE
-#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)!
+#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.1)!
 #### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
 ![](https://i.imgur.com/aWlEXab.png)
 
