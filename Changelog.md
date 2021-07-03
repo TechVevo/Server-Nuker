@@ -4,6 +4,19 @@
 
 Last updated: 29th May, 2021
 
+### v2.4.0
+> 🎉 Public version released!!! [Click here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.0) to get to the releases tab
+
+> VirusTotal: [Click here](https://www.virustotal.com/gui/file/443bce4f3819a546606c1454317814e1f1f943ca5203ca1b7ea0339c13360778/detection)
+
+- Added:
+  - Clean Command
+  - More checks and catch statements for errors
+- Fixed:
+  - Purge and Clean Command's embed
+- Removed:
+  - Beta testing stuff
+
 ### v2.3.0:
 
 \> **New EXE with all the updates has been released! Check the release tab (or) [Click Here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.3.0)**.
