@@ -2,7 +2,21 @@
 
 > The list will be from latest version to first version.
 
-Last updated: 29th May, 2021
+Last updated: 3rd July, 2021
+
+### v2.4.1 - Bug Fixes
+
+> Fixed all the bugs in the vid 😄 | [Click here to download](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.1)!
+
+> VirusTotal: [Click here](https://www.virustotal.com/gui/file/6b0d77c906e501fcbb2c61180e2cd08677bcbd4dd2781874bef819185dee953a/detection)
+
+- Added:
+  - Embeds in some commands
+- Fixed:
+  - All the bugs! (Including everything that was seen in the YT video)
+  - Embed footers (`Server Nuker v2.0.0 [BETA]` --> `Server Nuker v2`)
+  - Improved `count` float detection
+
 
 ### v2.4.0
 > 🎉 Public version released!!! [Click here](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.0) to get to the releases tab
