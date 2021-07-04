@@ -1,19 +1,22 @@
-# Server Nuker
-### Description
+<h1 align="center">Server Nuker</h1>
+
+## Description
 * **Author:** Tech Vevo
 * **Current Version:** 2.3.1
 * This bot & source is made for fun and purely EDUCATIONAL PURPOSE! I do not take any responsibilty or liability due to the damage/problems caused by this product. It is your (the user's) sole responsibilty.
 * Find the latest Changelog [here](https://github.com/TechVevo/Server-Nuker/blob/master/Changelog.md).
 
-------------------------------------------
-### USAGE
-#### GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.1)!
-#### YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!
+## USAGE
+
+**GET THE LATEST VERSION [HERE](https://github.com/TechVevo/Server-Nuker/releases/tag/v2.4.1)!**
+
+**YOU NEED TO HAVE PRIVILEGED GATEWAY INTENTS > SERVER MEMBERS INTENT TURNED ON FOR KICK ALL & BAN ALL TO WORK!**
 ![](https://i.imgur.com/aWlEXab.png)
 
 #### 1. EXE Method
 > I know many people might be very doubtful. If you do not trust the EXE run a virus scan on it or put it in https://virustotal.com
-- The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
+
+The easiest way to use this bot is to go the [releases tab](https://github.com/TechVevo/Server-Nuker/releases) and downloading the latest EXE.
   - Download the EXE and place it in a seperate folder (Name it whatever you want).
   - Now open notepad and enter your bot's token and prefix like this:
     ```
@@ -27,7 +30,8 @@
 
 #### 2. MANUAL Method
 > **Note:** If you are going to follow this method, basic knowledge of coding is required. If you are new/don't want the hassle, then I highly suggest you to follow the above given [EXE Method](https://github.com/TechVevo/Server-Nuker#1-exe-method)!
-- If you do not trust the EXE (or) if you want to run directly from the source, follow the instructions below. You also need to **satisfy the "[REQUIREMENTS](https://github.com/TechVevo/Server-Nuker#requirements)" given below!** (You do not need those for the EXE)
+
+If you do not trust the EXE (or) if you want to run directly from the source, follow the instructions below. You also need to **satisfy the "[REQUIREMENTS](https://github.com/TechVevo/Server-Nuker#requirements)" given below!** (You do not need those for the EXE)
   - Go to the master branch and click on "Code" and give "Download as ZIP".
 ![](https://i.imgur.com/uPRwVUa.png)
   - Extract it and navigate inside the folder. It should look somewhat like this:
