@@ -50,7 +50,7 @@
 
 ------------------------------------------
 ### LICENSING
-\- This product is licensed under the [GNU General Public License v3.0](https://github.com/TechVevo/Server-Nuker/blob/master/LICENSE).
+I do not intend to harm any proper and legit servers with this software. This product is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) which implies that there is no warranty for it and you (the user) are solely responsible for the actions. I will neither be responsible nor be held accountable for any such matters!
 
 ------------------------------------------
 ### ©️COPYRIGHT DISCLAIMER
